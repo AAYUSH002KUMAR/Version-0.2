@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
 </head>
 
@@ -10,64 +11,95 @@
 
     <form action="table.html" method="get">
 
-        <label>Name</label>
-        <input type="text" name="name" placeholder="Name">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name">
         <br><br>
 
-        <label>Email-id</label>
-        <input type="email" name="email" placeholder="Email-id">
+        <label for="email">Email-id</label>
+        <input type="email" id="email" name="email" placeholder="Email-id">
         <br><br>
 
-        <label>Password</label>
-        <input type="password" name="password" placeholder="Password">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password">
         <br><br>
 
         <label>Language</label>
         <br><br>
 
-        <input type="radio" name="language" value="HTML"> HTML <br>
-        <input type="radio" name="language" value="CSS"> CSS <br>
-        <input type="radio" name="language" value="JavaScript"> JS
+        <label for="html">
+            <input type="radio" id="html" name="language" value="HTML">
+            HTML
+        </label>
+        <br>
+
+        <label for="css">
+            <input type="radio" id="css" name="language" value="CSS">
+            CSS
+        </label>
+        <br>
+
+        <label for="javascript">
+            <input type="radio" id="javascript" name="language" value="JavaScript">
+            JavaScript
+        </label>
+
         <br><br><br>
 
         <label>Course</label>
         <br><br>
 
-        <input type="checkbox" name="course" value="Java Stack"> Java Stack <br>
-        <input type="checkbox" name="course" value="Data Science"> Data Science <br>
-        <input type="checkbox" name="course" value="MERN Stack"> Mern Stack
+        <label for="java-stack">
+            <input type="checkbox" id="java-stack" name="course" value="Java Stack">
+            Java Stack
+        </label>
+        <br>
+
+        <label for="data-science">
+            <input type="checkbox" id="data-science" name="course" value="Data Science">
+            Data Science
+        </label>
+        <br>
+
+        <label for="mern-stack">
+            <input type="checkbox" id="mern-stack" name="course" value="MERN Stack">
+            MERN Stack
+        </label>
+
         <br><br><br>
 
-        <label>Field:</label>
+        <label for="field">Field</label>
         <br><br>
 
-        <select name="field">
-            <option selected disabled>Select</option>
-            <option>Frontend</option>
-            <option>Backend</option>
-            <option>Full Stack</option>
-            <option>Data Science</option>
+        <select id="field" name="field">
+            <option value="" selected disabled>Select</option>
+            <option value="Frontend">Frontend</option>
+            <option value="Backend">Backend</option>
+            <option value="Full Stack">Full Stack</option>
+            <option value="Data Science">Data Science</option>
         </select>
 
         <br><br>
 
-        <textarea rows="3" cols="25" placeholder="Describe yourself"></textarea>
+        <label for="about">Describe Yourself</label>
+        <br><br>
+
+        <textarea id="about" name="about" rows="3" cols="25" placeholder="Describe yourself"></textarea>
 
         <br><br>
 
-        <label>Date</label>
+        <label for="date">Date</label>
         <br><br>
 
-        <input type="date" name="date">
-
-        <br><br>
-
-        <label>Phone No.</label>
-        <input type="tel" name="phone" placeholder="Phone NO.">
+        <input type="date" id="date" name="date">
 
         <br><br>
 
-        <input type="submit" value="submit">
+        <label for="phone">Phone No.</label>
+        <input type="tel" id="phone" name="phone" placeholder="Phone No.">
+
+        <br><br>
+
+        <input type="submit" value="Submit">
 
     </form>
 
