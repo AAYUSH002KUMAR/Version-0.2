@@ -12,21 +12,187 @@
             background-color: purple;
             padding: 10px 20px;
         }
-
+        .left {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
         .navbar a {
             color: white;
             text-decoration: none;
             padding: 8px 16px;
         }
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .search {
+            padding: 8px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+        }
+        .search:focus {
+            outline: none;
+            border: 2px solid yellow;
+            background-color: lightyellow;
+        }
+        .download {
+            padding: 8px 16px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .download:hover {
+            background-color: white;
+            color: purple;
+        }
+        .footer {
+            text-align: center;
+            padding: 1px;
+            background-color: purple;
+            color: white;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            min-height: 80vh;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            padding: 20px;
+        }
+        .sidebar h2 {
+            color: white;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: purple;
+            padding-left: 20px;
+        }
+        .content {
+            flex: 1;
+            padding: 30px;
+        }
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            height: 400px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px gray;
+            transition: 0.3s;
+            width: calc((100% - 40px) / 3);
+            box-sizing: border-box;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px gray;
+        }
+        .card h2 {
+            color: purple;
+        }
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <div class="left">
+            <img src="logo.jpg" alt="Logo" class="logo">
+
+            <a href="#">Home</a>
+            <a href="#">Docs</a>
+            <a href="#">Examples</a>
+            <a href="#">Icons</a>
+            <a href="#">Blog</a>
+        </div>
+
+        <div class="right">
+            <input type="text" class="search" placeholder="Search">
+            <a href="#" class="download">Download</a>
+        </div>
     </div>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <a href="#">Dashboard</a>
+            <a href="#">Profile</a>
+            <a href="#">Projects</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </aside>
+        <main class="content">
+            <h1>Welcome to Dashboard</h1>
+            <div class="cards">
+                <div class="card">
+                    <h2>MERN Stack</h2>
+                    <ul>
+                        <li>MongoDB</li>
+                        <li>Express.js</li>
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2>Ches Rules</h2>
+                    <ol>
+                        <li>Each player starts with 16 pieces.</li>
+                        <li>Pawns move forward one square, but capture diagonally.</li>
+                        <li>The king can move one square in any direction.</li>
+                    </ol>
+                </div>
+                <div class="card">
+                    <h2>Earth</h2>
+                    <p><img src="earth.jpg" alt="Earth" class="logo"></p>
+                </div>
+                <div class="card">
+                    <h2>To Do List</h2>
+                    <p>Manage your tasks efficiently.</p>
+                    <p>Passport is required for this.</p>
+                    <p>Wash The Car</p>
+                </div>
+                <div class="card">
+                    <h2>Internal Update</h2>
+                    <p>No updates for now. Will update you soon.</p>
+                </div>
+                <div class="card">
+                    <h2>Happy Birthday</h2>
+                    <p>Have a great day! Rahul</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <p>© 2026 My Website | Made by Aayush Kumar</p>
+    </footer>
+</body>
 </body>
 </html>
-
