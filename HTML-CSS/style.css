@@ -1,0 +1,39 @@
+.card1 {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    z-index: 4;
+}
+
+.card2{
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    z-index: 3;
+}
+
+.card3 {
+    position: absolute;
+    right: 150px;
+    top: 150px;
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    z-index: 2;
+}
+
+.card4 {
+    position: absolute;
+    right: 200px;
+    top: 200px;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    z-index: 1;
+}
