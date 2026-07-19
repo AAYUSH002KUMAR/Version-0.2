@@ -1,15 +1,36 @@
-<!-- 2.	What input type will you use to upload a image ?-->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q2</title>
+    <title>Q2 - Upload an Image</title>
 </head>
+
 <body>
-    <h1>Input type to upload an image:</h1>
-    <label for="imageUpload">Upload an image:</label>
-    <input type="file" id="imageUpload" accept="image/*">
+
+    <h1>Question 2</h1>
+
+    <h2>What Input Type Will You Use to Upload an Image?</h2>
+
+    <p>
+        To upload an image (or any file), use the
+        <code>&lt;input type="file"&gt;</code> element.
+    </p>
+
+    <h3>Example</h3>
+
+    <pre>
+&lt;form&gt;
+    &lt;input type="file" accept="image/*"&gt;
+&lt;/form&gt;
+    </pre>
+
+    <p>
+        The <code>accept="image/*"</code> attribute restricts file selection to
+        image files only.
+    </p>
+
 </body>
+
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q100 - Submit Form Data in URL</title>
+</head>
+
+<body>
+
+    <h1>Question 100</h1>
+
+    <h2>How Will You Implement That When You Click on the Submit Button, the Whole Data Comes in URL Form?</h2>
+
+    <p>
+        To send form data in the URL, use the
+        <strong>GET</strong> method in the <code>&lt;form&gt;</code> tag.
+    </p>
+
+    <h3>Example</h3>
+
+    <pre>
+&lt;form action="submit.html" method="get"&gt;
+
+Name:
+&lt;input type="text" name="username"&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+Email:
+&lt;input type="email" name="email"&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;input type="submit" value="Submit"&gt;
+
+&lt;/form&gt;
+    </pre>
+
+    <p>
+        After submission, the browser appends the form data to the URL in the
+        following format:
+    </p>
+
+    <pre>
+submit.html?username=Aayush&email=aayush@example.com
+    </pre>
+
+</body>
+
+</html>

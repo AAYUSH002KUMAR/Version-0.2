@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q76 - Web Workers in HTML5</title>
+</head>
+
+<body>
+
+    <h1>Question 76</h1>
+
+    <h2>What are Web Workers in HTML5?</h2>
+
+    <p>
+        <strong>Web Workers</strong> allow JavaScript to run in the background
+        without affecting the performance of the web page. They execute scripts in
+        a separate thread, keeping the user interface responsive.
+    </p>
+
+    <h3>Advantages</h3>
+
+    <ul>
+        <li>Improves application performance.</li>
+        <li>Prevents the browser from freezing during heavy computations.</li>
+        <li>Runs tasks in the background.</li>
+    </ul>
+
+    <h3>Example</h3>
+
+    <pre>
+let worker = new Worker("worker.js");
+worker.postMessage("Start");
+    </pre>
+
+</body>
+
+</html>
