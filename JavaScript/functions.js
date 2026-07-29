@@ -1,3 +1,30 @@
+//Functions
+function isAnagram(str1, str2){
+    
+    return
+}
+
+//1. normal declaration
+function checksomething(a, b){
+    return a+b
+}
+console.log(checksomething(3 , 4))
+
+//2. express function
+let fun2 = function (){
+
+}
+
+var fun3 = ()=> {
+    
+}
+
+//Use of Strict
+"use strict"
+x = "35"
+console.log(x)
+
+
 //1. Normal Function
 aay()
 function aay(){
@@ -33,3 +60,4 @@ function FindVowels(str){
     return result;
 }
 console.log(FindVowels("This is my MERN Stack Class"));
+
