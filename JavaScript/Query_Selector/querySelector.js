@@ -31,10 +31,30 @@
 // }
 
 
-let listselection = document.querySelectorAll('li')
-console.loh(listselection)
+// let listselection = document.querySelectorAll('li')
+// console.loh(listselection)
 
-listselection.forEach((index, item) => {
-    console.log(index)
-    console.log(item)
-})
+// listselection.forEach((index, item) => {
+//     console.log(index)
+//     console.log(item)
+// })
+
+
+const heading = document.createElement('h1')
+heading.innerText = "hello content"
+document.body.append("heading")
+const paragraph = document.createElement('p')
+paragraph.innerText = "this is paragraph"
+document.body.append("paragraph")
+
+const image = document.createElement('img')
+image.setAttribute('scr', "")
+image.getAttribute()
+
+// append vs appendchild
+appendchild(heading, "ksdbadsf")
+
+const box = document.getElementById('box');
+const addbtn = document.getElementById('addbutton');
+const removebutton = document.getElementById('removebtn');
+const togglebutton = document.getElementById('togglebtn');
