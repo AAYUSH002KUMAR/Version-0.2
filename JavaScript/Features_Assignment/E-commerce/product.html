@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saregama Carvaan</title>
+    <link rel="stylesheet" href="product.css"
+</head>
+<body>
+    <div class="product-container">
+        <div class="product">
+            <div class="product-image">
+                <img src="saregama-carvaan.png" alt="Saregama Carvaan">
+            </div>
+            <div class="product-details">
+                <h1>Saregama Carvaan</h1>
+                <p class="description">
+                    Saregama Carvaan is a portable digital music player
+                    designed with a classic retro look and pre-loaded
+                    evergreen Hindi songs.
+                </p>
+                <p class="availability">
+                    Availability:
+                    <span>In Stock</span>
+                </p>
+                <p class="price">
+                    ₹<span id="price">29999</span>
+                </p>
+
+                <div class="quantity">
+                    <label for="quantity">
+                        Quantity:
+                    </label>
+                    <input type="number" id="quantity" value="1" min="1">
+                </div>
+
+                <p class="total">
+                    Total: ₹<span id="total">29999</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="review-section">
+            <h2>Add a Review</h2>
+            <input type="text" id="reviewInput" placeholder="Write your review">
+            <select id="rating" aria-label="Rating">
+                <option value="5">5 ⭐</option>
+                <option value="4">4 ⭐</option>
+                <option value="3">3 ⭐</option>
+                <option value="2">2 ⭐</option>
+                <option value="1">1 ⭐</option>
+            </select>
+            <button id="reviewBtn">
+                Submit Review
+            </button>
+        </div>
+
+        <div class="reviews">
+            <h2>Customer Reviews</h2>
+            <div id="reviewList">
+            </div>
+        </div>
+    </div>
+
+    <script src="product.js"></script>
+</body>
+</html>
