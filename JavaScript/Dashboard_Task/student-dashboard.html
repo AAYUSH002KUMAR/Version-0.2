@@ -1,63 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Student Dashboard</title>
-
     <link rel="stylesheet" href="student-dashboard.css">
 </head>
-
 <body>
 
-    <div class="dashboard">
-
-        <h1>Student Dashboard</h1>
-
-        <button id="highlightBtn">
-            Highlight Students
-        </button>
-
-        <div class="student-container">
-
-            <div class="card">
-                <h2>Aayush Kumar</h2>
-                <p>Information Technology</p>
+    <header class="navbar">
+        <div class="navbar-left">
+            <button id="sidebarToggle" class="menu-btn" aria-label="Toggle Sidebar">
+                ☰
+            </button>
+            <div class="brand">
+                <span class="brand-icon">🎓</span>
+                <span>StudentHub</span>
             </div>
-
-            <div class="card">
-                <h2>Rahul Sharma</h2>
-                <p>Computer Science</p>
-            </div>
-
-            <div class="card">
-                <h2>Priya Singh</h2>
-                <p>Information Technology</p>
-            </div>
-
-            <div class="card">
-                <h2>Aditya Verma</h2>
-                <p>Computer Science</p>
-            </div>
-
-            <div class="card">
-                <h2>Neha Gupta</h2>
-                <p>Electronics</p>
-            </div>
-
-            <div class="card">
-                <h2>Rohan Mehta</h2>
-                <p>Information Technology</p>
-            </div>
-
         </div>
+        <div class="navbar-right">
+            <button class="nav-icon" title="Notifications">
+                🔔
+            </button>
+            <button id="toggleBtn" class="theme-btn">
+                🌙 Dark Mode
+            </button>
+            <div class="profile">
+                <div class="profile-avatar">AK</div>
+                <div class="profile-info">
+                    <strong>Aayush Kumar</strong>
+                    <small>Student</small>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <div class="page-layout">
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-menu">
+                <p class="menu-title">MAIN MENU</p>
+                <a href="#" class="sidebar-link active">
+                    <span>📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span>👨‍🎓</span>
+                    <span>Students</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span>📚</span>
+                    <span>Courses</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span>📈</span>
+                    <span>Analytics</span>
+                </a>
+                <p class="menu-title">SYSTEM</p>
+                <a href="#" class="sidebar-link">
+                    <span>⚙️</span>
+                    <span>Settings</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <span>❓</span>
+                    <span>Help & Support</span>
+                </a>
+            </div>
+            <div class="sidebar-bottom">
+                <a href="#" class="sidebar-link logout">
+                    <span>🚪</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <!-- Page Heading -->
+            <section class="page-header">
+                <div>
+                    <p class="breadcrumb">Home / Dashboard</p>
+                    <h1>Student Dashboard</h1>
+                    <p class="welcome-text">
+                        Welcome back! Here's an overview of your students.
+                    </p>
+                </div>
+                <div class="header-date">
+                    <span>📅</span>
+                    <span>Academic Year 2026</span>
+                </div>
+            </section>
+
+            <section class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon blue">👨‍🎓</div>
+                    <div class="stat-content">
+                        <p>Total Students</p>
+                        <h2>06</h2>
+                        <span class="stat-change">+2 this month</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">💻</div>
+                    <div class="stat-content">
+                        <p>IT Students</p>
+                        <h2>03</h2>
+                        <span class="stat-change">50% of students</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple">🖥️</div>
+                    <div class="stat-content">
+                        <p>CS Students</p>
+                        <h2>02</h2>
+                        <span class="stat-change">33% of students</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">📊</div>
+                    <div class="stat-content">
+                        <p>Average Score</p>
+                        <h2>89%</h2>
+                        <span class="stat-change">+4.2% this semester</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="students-section">
+                <div class="section-header">
+                    <div>
+                        <h2>Students</h2>
+                        <p>Manage and view student performance</p>
+                    </div>
+                    <button id="highlightBtn" class="highlight-btn">
+                        ⭐ Highlight Students
+                    </button>
+
+                </div>
+
+                <div class="controls">
+                    <div class="search-box">
+                        <span>🔍</span>
+                        <input type="text" id="searchInput" placeholder="Search students...">
+                    </div>
+                    <select id="departmentFilter">
+                        <option value="all">All Departments</option>
+                        <option value="Information Technology">
+                            Information Technology
+                        </option>
+                        <option value="Computer Science">
+                            Computer Science
+                        </option>
+                        <option value="Electronics">
+                            Electronics
+                        </option>
+                    </select>
+                </div>
+
+                <div class="student-container">
+                    <div class="card" data-department="Information Technology" data-score="94">
+                        <div class="card-top">
+                            <div class="student-avatar">AK</div>
+                            <span class="status active">Active</span>
+                        </div>
+                        <h3>Aayush Kumar</h3>
+                        <span class="course-badge it">
+                            Information Technology
+                        </span>
+                        <div class="student-details">
+                            <div class="detail-row">
+                                <span>Attendance</span>
+                                <strong>92%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 92%;"></div>
+                            </div>
+                            <div class="detail-row">
+                                <span>Performance</span>
+                                <strong>94%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 94%;"></div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>GPA: <strong>9.1</strong></span>
+                            <button class="view-btn">View Profile →</button>
+                        </div>
+                    </div>
+                    <div class="card" data-department="Computer Science" data-score="88">
+                        <div class="card-top">
+                            <div class="student-avatar">RS</div>
+                            <span class="status active">Active</span>
+                        </div>
+                        <h3>Rahul Sharma</h3>
+                        <span class="course-badge cs">
+                            Computer Science
+                        </span>
+                        <div class="student-details">
+                            <div class="detail-row">
+                                <span>Attendance</span>
+                                <strong>86%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 86%;"></div>
+                            </div>
+                            <div class="detail-row">
+                                <span>Performance</span>
+                                <strong>88%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 88%;"></div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>GPA: <strong>8.7</strong></span>
+                            <button class="view-btn">View Profile →</button>
+                        </div>
+                    </div>
+                    <div class="card" data-department="Information Technology" data-score="91">
+                        <div class="card-top">
+                            <div class="student-avatar">PS</div>
+                            <span class="status active">Active</span>
+                        </div>
+                        <h3>Priya Singh</h3>
+                        <span class="course-badge it">
+                            Information Technology
+                        </span>
+                        <div class="student-details">
+                            <div class="detail-row">
+                                <span>Attendance</span>
+                                <strong>95%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 95%;"></div>
+                            </div>
+                            <div class="detail-row">
+                                <span>Performance</span>
+                                <strong>91%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 91%;"></div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>GPA: <strong>9.0</strong></span>
+                            <button class="view-btn">View Profile →</button>
+                        </div>
+                    </div>
+                    <div class="card" data-department="Computer Science" data-score="82">
+                        <div class="card-top">
+                            <div class="student-avatar">AV</div>
+                            <span class="status active">Active</span>
+                        </div>
+                        <h3>Aditya Verma</h3>
+                        <span class="course-badge cs">
+                            Computer Science
+                        </span>
+                        <div class="student-details">
+                            <div class="detail-row">
+                                <span>Attendance</span>
+                                <strong>79%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 79%;"></div>
+                            </div>
+                            <div class="detail-row">
+                                <span>Performance</span>
+                                <strong>82%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 82%;"></div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>GPA: <strong>8.2</strong></span>
+                            <button class="view-btn">View Profile →</button>
+                        </div>
+                    </div>
+                    <div class="card" data-department="Electronics" data-score="89">
+                        <div class="card-top">
+                            <div class="student-avatar">NG</div>
+                            <span class="status active">Active</span>
+                        </div>
+                        <h3>Neha Gupta</h3>
+                        <span class="course-badge ece">
+                            Electronics
+                        </span>
+                        <div class="student-details">
+                            <div class="detail-row">
+                                <span>Attendance</span>
+                                <strong>90%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                            <div class="detail-row">
+                                <span>Performance</span>
+                                <strong>89%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 89%;"></div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>GPA: <strong>8.9</strong></span>
+                            <button class="view-btn">View Profile →</button>
+                        </div>
+                    </div>
+                    <div class="card" data-department="Information Technology" data-score="86">
+                        <div class="card-top">
+                            <div class="student-avatar">RM</div>
+                            <span class="status active">Active</span>
+                        </div>
+                        <h3>Rahul Mehta</h3>
+                        <span class="course-badge it">
+                            Information Technology
+                        </span>
+                        <div class="student-details">
+                            <div class="detail-row">
+                                <span>Attendance</span>
+                                <strong>84%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 84%;"></div>
+                            </div>
+                            <div class="detail-row">
+                                <span>Performance</span>
+                                <strong>86%</strong>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 86%;"></div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>GPA: <strong>8.6</strong></span>
+                            <button class="view-btn">View Profile →</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 
+    <footer class="footer">
+        <div>
+            <strong>🎓 StudentHub</strong>
+            <span>Student Management Dashboard</span>
+        </div>
+        <div>
+            © 2026 StudentHub. All rights reserved.
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Help</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
     <script src="student-dashboard.js"></script>
-
 </body>
-
 </html>

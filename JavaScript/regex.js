@@ -9,3 +9,4 @@ console.log(phonereg.test(number))
 const email = "maheshDubey12@gmail.com"
 const regexemail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 console.log(regexemail.test(email))
+
